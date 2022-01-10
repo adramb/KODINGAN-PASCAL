@@ -1,0 +1,30 @@
+program UPM_ALGO1;
+uses crt;
+var      nama:string;
+         jhari_kerja,jjam_lembur:integer;
+         transLembur,gaji:real;
+         uangLembur,upah:LongInt;
+begin
+clrscr;
+         write ('Nama Pegawai = '); readln (nama);
+         write ('Jumlah hari kerja = '); readln (jhari_kerja);
+         write ('Jumlah Jam Lembur = '); readln (jjam_lembur);
+
+
+         upah := jhari_kerja * 30000;
+         uangLembur := jjam_lembur * 5000;
+
+         if (jjam_lembur > 10) then begin
+         transLembur := 10/100 * uanglembur;
+         end
+         else begin transLembur := 0;
+         end;
+
+         gaji := upah + uangLembur + transLembur;
+
+         writeln ('========================================');
+         writeln (nama);
+         writeln (gaji:9:0);
+
+readln;
+end.
